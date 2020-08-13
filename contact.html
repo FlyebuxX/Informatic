@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with-device_width, initial=scale=1.0"/>
+        <title>Nouvelles Technologies - Contact</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cb5781e2cc.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="navbar">
+                <div class="left">
+                    <img src="images/logo.png" class="logo" height="70px">
+                    <p class="pseudo">FlyebuX</p>
+                </div>
+                <div class="right">
+                    <input type="search" class="recherche" placeholder="Recherche..."/>
+                    <nav class="menu-nav">
+                        <ul>
+                            <li><a href="accueil.html">Accueil</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="roue_libre.html">Roue Libre</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>   
+
+        <div class="entete-form">
+            <p class="accueil-form">Pour toutes demandes, merci de remplir les champs ci-dessous, avec le plus grand degré de précision en ne négligeant aucune case, de telle sorte à recevoir une réponse complète et adaptée. Merci.</p>
+        </div>       
+
+        
+            <form method="POST" action="traitement.php" class="formulaire">
+
+               
+                <div class="form-group">
+                    <label for="nom" id="nom"></label>
+                    <input type="text" name="nom" placeholder="Votre nom..." required>                          
+                        
+                    <label for="prenom" id="prenom"></label>
+                    <input type="text" name="prenom" placeholder="Votre prénom..." required>
+                </div>
+
+
+                <div class="form-group">                       
+                    <label for="email" id="email"></label>
+                    <input type="emal" class="email" name="email" placeholder="Votre email  Ex : michel.dupont@123.fr"> 
+                </div>     
+
+
+                <div class="form-group">
+                    <label for="demande" id="demande">Choisissez votre motif :</label>
+                    <select>
+                        <option>Aide sur le site</option>
+                        <option>Rendez-vous à l'agence</option>
+                        <option>Appel téléphonique</option>
+                        <option>Proposition de partenariats</option>
+                        <option selected="selected">Questions relatives aux conditions d'utilisation</option>
+                        <option>Autres</option>                        
+                    </select>  
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description" id="description"></label>
+                    <textarea name="validatdescriptionion" class="message" placeholder="Votre message..." spellcheck="true" required rows="10" cols="70"></textarea>
+                </div>  
+            
+                
+                <div class="form-group">
+                    <label for="date" id="date">Date de la saisie de la demande :</label>
+                <input type="date" name="date" required>  
+                </div>
+
+
+                <div class="form-group">
+                    
+                    <label for="email" id="email"></label>
+                    <input type="reset" class="cancel" name="validation" value="Annuler tout" required>   
+                
+                    <label for="email" id="email"></label>
+                    <input type="submit" name="validation" class="submit" value="Envoyer le formulaire" required>
+                     
+                </div>
+   
+               
+            </form>
+
+            <p class="adress">30, rue de Verdun</p>
+            <p class="end-form">Metz 57000</p><br>
+            <hr class="end-line">
+            <p class="end-form">+33 (0)6 03 50 05 67</p>
+
+
+        <div class="footer">
+            Copyright &copy; FlyebuX - <script>
+                function getLongDateString()
+                {monthNames = new Array("Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+                dayNames = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+                    dayOfWeek = this.getDay();
+                    day = dayNames[dayOfWeek];
+                    dateOfMonth = this.getDate();
+                monthNo = this.getMonth();
+                    month = monthNames[monthNo];
+                year = this.getYear();
+                    if (year < 2000)
+                year = year + 1900;
+                dateStr = day+" "+dateOfMonth+" "+month+" "+year;
+                    return dateStr;
+                }
+                Date.prototype.getLongDateString=getLongDateString;
+                
+                function DocDate()
+                { DateTimeStr = document.lastModified;
+                secOffset = Date.parse(DateTimeStr);
+                if (secOffset == 0 || secOffset == null) //Opera3.2
+                             dateStr = "Unknown";
+                    else
+                    {
+                        aDate = new Date();
+                        aDate.setTime(secOffset);
+                        datestr = aDate.getLongDateString();
+                    }
+                    return dateStr;
+                }
+                </script>
+                
+                <script>
+                document.write("Mise à jour du site le : <b>");
+                document.writeln(DocDate(),"</b>");
+                </script>- All Rights Reserved
+        </div> 
+        </body>
+    </html>

@@ -1,0 +1,281 @@
+* { margin: 0; padding: 0; box-sizing: border-box;font-family: 'Montserrat', sans-serif;}
+a { text-decoration: none;}
+
+body{
+    background-color: #292422;
+}
+
+/* PAGE D'ACCUEIL */
+
+/* NAVBAR */
+
+div.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    opacity: 0.9;
+}
+
+div.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;  
+}
+
+div.navbar ul li a{
+    color: #D26438;
+    padding: 13px;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: #D26438;
+}
+
+div.navbar ul li a:hover{
+    color: #ffffff;
+    background-color: #D26438;
+    transition: 0.4s;
+    border-style: solid;
+}
+
+div.left{
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+}
+
+div.right{
+    display: flex;
+    justify-content: center;
+}
+
+.pseudo{
+    color: #ffffff;
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    font-size: 35px;
+    text-transform: none; 
+}
+
+input.recherche{
+    height: 30px;
+    width: 400px;
+    align-self: center;
+    border-style: none;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+} 
+
+div.slider{
+    margin-bottom: -10px;
+    border-bottom: 3px solid #D26438;
+}
+
+.slides{
+    display: flex;
+    flex-direction: row;
+    animation: glisse 60s infinite;
+    opacity: 0.9;
+}
+
+@keyframes glisse{
+
+    0%{
+        transform: translateX(0px);
+    } 
+    25%{
+        transform: translateX(-2000px);
+    }
+    50%{
+        transform: translateX(-4000px);
+    }
+    75%{
+        transform: translateX(-2000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
+div.banner-content{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    line-height: 50px;
+}
+
+button.button-contact{
+    background-color: #D26438;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: none;
+    font-size: 16px;
+}
+
+/* FIN SLIDER ACCUEIL*/
+
+
+/* CONTENT ACCUEIL*/
+
+div.colonnes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+div.colonne1{
+    width: 30%;
+    background-color: #1a1a1a;
+    color: #D26438;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+div.colonne2{
+    width: 30%;
+    background-color: #1a1a1a;
+    color: #D26438;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+div.colonne3{
+    width: 30%;
+    background-color: #1a1a1a;
+    color: #D26438;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+p.paragraphe
+{
+   font-weight: 550;
+}
+
+/* FIN CONTENT ACCUEIL */
+
+
+/* CONTACT */
+
+p.accueil-form{
+    text-decoration-line: underline;
+    color: #ffffff;
+    margin-top: 120px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 36px;
+}
+
+div.form-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.formulaire{
+    margin-top: 100px;
+    background-color: #D26438;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.form-group label{
+    color: #ffffff;
+    margin: 5px;
+    padding: 10px;
+    align-self: center;
+}
+
+.form-group input, select, option{
+    border: none;
+    outline: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+
+input.email{
+    width: 426px;
+}
+
+textarea.message{
+    width: 430px;
+    height: 200px;
+    padding: 8px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea.message:focus{
+    border : 3px solid  #292422;
+}
+
+input.submit:hover{
+    background-color: #292422;
+    color: #ffffff;
+}
+
+input.cancel:hover{
+    background-color: #292422;
+    color: #ffffff;
+}
+
+form input, select, textarea{
+    background-color: #E2DAC8;
+}
+
+p.end-form{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 14px;
+}
+
+p.adress{
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+hr.end-line{
+    width: 90%;
+    margin: auto;
+}
+
+
+/* CONTACT FIN */
+
+
+.footer{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    font-size: 18px;
+}
+

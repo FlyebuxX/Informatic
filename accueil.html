@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with-device_width, initial=scale=1.0"/>
+        <title>Nouvelles Technologies - Contact</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+        <!-- ajouter une police d'écriture -->
+
+        
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+
+        <script src="https://kit.fontawesome.com/cb5781e2cc.js" crossorigin="anonymous"></script>        
+    </head>
+    <body>
+        <header class="header">
+            <div class="navbar">
+                <div class="left">
+                    <img src="images/logo_informatic.png" class="logo" height="70px">
+                    <p class="pseudo">FlyebuX</p>
+                </div>
+                <div class="right">
+                    <input type="search" class="recherche" placeholder="Recherche..."/>
+                    <nav class="menu-nav">
+                        <ul>
+                            <li><a href="accueil.html">Accueil</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="roue_libre.html">Roue Libre</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="images/banner_1.jpg" class="banner-image" width="2000px" height="920px"></div>
+            <div class="slide"><img src="images/banner_2.jpg" class="banner-image" width="2000px" height="920px"></div>              
+            <div class="slide"><img src="images/banner_3.jpg" class="banner-image" width="2000px" height="920px"></div>                  
+        </div>
+    </div>
+    <div class="banner-content">
+        <h1>Bienvenue sur mon site !</h1>
+        <h2>Découvrez mes travaux et mon univers !</h2>
+
+    <form action="contact.html">
+        <button class="button-contact" type="submit">Contactez-moi !</button>
+    </form>
+    </div>
+    <div id="content">
+        <div class="colonnes">
+            <div class="colonne1">
+                <i class="far fa-address-card icone1"></i>
+                <h3 class="titre1"><strong>Qui suis-je ?</strong></h3><br>              
+                <!-- <p class="paragraphe">Salut, je me présente, je suis Fly. J'ai 16 ans et j'étudie au lycée Louis Vincent de Metz. Cela fait quelques temps que j'apprends à coder, et depuis quelques jours je m'attaque au HTML et CSS. En cette période de confinement, il vaut mieux trouver des occupations de quoi tenir le coup !</p> -->
+            </div>
+            <div class="colonne2">
+                <i class="fas fa-code"></i>
+                <h3 class="titre2"><strong>Actualités</strong></h3><br>
+                <!-- <p class="paragraphe">Je code depuis près de 3 mois, pour l'instant je suis diverses formations concernant le HTML et le CSS sur plusieurs sites afin d'avoir des connaissances les plus vastes possibles. Mon objectif des prochains jours est d'apprendre un nouveau langage, le PHP et par la suite le Javascript, le C et bien sûr le C++.</p> -->
+            </div>
+            <div class="colonne3">
+                <i class="fas fa-coffee"></i>
+                <h3 class="titre3">Quoi trouver sur ce site ?</h3><br>
+                <!-- <p class="paragraphe">Sur cette page Web, vous trouverez surtout des informations concernant les nouvelles technologies, la téléphonie et l'informatique. Je vais essayer de lier des bots afin d'avoir l'actu en temps réel. Dans l'onglet Roue Libre, vous retrouverez mon avancée dans ma formation et pourquoi pas d'autres choses encore !</p> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Copyright &copy; FlyebuX - <script>
+            function getLongDateString()
+            {monthNames = new Array("Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+            dayNames = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+                dayOfWeek = this.getDay();
+                day = dayNames[dayOfWeek];
+                dateOfMonth = this.getDate();
+            monthNo = this.getMonth();
+                month = monthNames[monthNo];
+            year = this.getYear();
+                if (year < 2000)
+            year = year + 1900;
+            dateStr = day+" "+dateOfMonth+" "+month+" "+year;
+                return dateStr;
+            }
+            Date.prototype.getLongDateString=getLongDateString;
+            
+            function DocDate()
+            { DateTimeStr = document.lastModified;
+            secOffset = Date.parse(DateTimeStr);
+            if (secOffset == 0 || secOffset == null) //Opera3.2
+                         dateStr = "Unknown";
+                else
+                {
+                    aDate = new Date();
+                    aDate.setTime(secOffset);
+                    datestr = aDate.getLongDateString();
+                }
+                return dateStr;
+            }
+            </script>
+            
+            <script>
+            document.write("Mise à jour du site le : <b>");
+            document.writeln(DocDate(),"</b>");
+            </script>- All Rights Reserved
+    </div>
+    <script src="animations/javascript.js"></script>
+    </body>
+</html>
